@@ -165,7 +165,8 @@ function handleItemDrop(msg) {
 	if(printItemDrops) console.info(Date(), msg);
 
 	// TODO better method than this?
-	if(msg.indexOf('a resource bag') >= 0) tsResults.itemInfo.resourceBagDrop += 1;
+	if(msg.indexOf('resources bag') >= 0) tsResults.itemInfo.resourceBagDrop += 1;
+	else if(msg.indexOf('resource bags') >= 0) tsResults.itemInfo.resourceBagDrop += 1;
 	else if(msg.indexOf('a key') >= 0) tsResults.itemInfo.keyDrop += 1;
 	else if(msg.indexOf('a gem') >= 0) tsResults.itemInfo.gemDrop += 1;
 
